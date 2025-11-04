@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas e Alunos | Gastronomia Moçambicana</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>GASTRONOMIA MOÇAMBICANA</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="menu.html">Menu Principal</a>
+            <a href="sobre.html">Sobre o Restaurante</a>
+            <a href="reservas.html">Reservas e Alunos</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2>Faça a sua Reserva</h2>
+        <p style="text-align: center; max-width: 600px; margin: 0 auto 30px;">
+            Preencha o formulário abaixo para garantir a sua mesa.
+        </p>
+
+        <form class="formulario-reserva" action="#" method="POST">
+            <div class="campo">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" placeholder="Ex: João Silva" required>
+            </div>
+            <div class="campo">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="exemplo@dominio.com" required>
+            </div>
+            <div class="campo">
+                <label for="data">Data da Reserva:</label>
+                <input type="date" id="data" name="data" required>
+            </div>
+            <div class="campo">
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" name="hora" required>
+            </div>
+            <div class="campo">
+                <label for="pessoas">Nº de Pessoas:</label>
+                <input type="number" id="pessoas" name="pessoas" min="1" max="50" placeholder="Mín. 1 / Máx. 50" required>
+            </div>
+            <button type="submit" class="btn-reservar">CONFIRMAR RESERVA</button>
+        </form>
+
+        <hr style="margin: 60px auto; border-color: #ddd; max-width: 800px;">
+
+        <h2>Tabela dos elemtos do grupo turma B1,11a classe</h2>
+        <p style="text-align: center; margin-bottom: 20px;">
+            Lista dos elementos do grupo responsáveis pela criação deste website.
+        </p>
+        
+        <div style="overflow-x: auto;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nº</th>
+                        <th>Nome do Aluno(a)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>9</td><td>Arlete Alexandre</td></tr>
+                    <tr><td>10</td><td>Belo Ernesto Muavirela</td></tr>
+                    <tr><td>14</td><td>Cheldrean da Clarice</td></tr>
+                    <tr><td>18</td><td>Cristina Taibo Muarabo</td></tr>
+                    <tr><td>23</td><td>Edgar dos Messias Aduzindo</td></tr>
+                    <tr><td>25</td><td>Elianai Florentino da Costa</td></tr>
+                    <tr><td>28</td><td>Emanuela Anlaué Amade</td></tr>
+                    <tr><td>30</td><td>Eugenia Mussa</td></tr>
+                    <tr><td>34</td><td>Felecidade Agostinho</td></tr>
+                    <tr><td>38</td><td>Gipson Da Rita Camilo</td></tr>
+                    <tr><td>40</td><td>Idania da Ancha </td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Gastronomia Moçambicana. Trabalho Prático de TIC.</p>
+    </footer>
+</body>
+</html>

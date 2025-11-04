@@ -1,0 +1,268 @@
+/* style.css - Design Profissional Gastronomia Moçambicana (Tema Azul e Dourado) */
+
+:root {
+    --cor-principal: #194569; /* Azul Escuro/Petróleo (Cor menos intensa) */
+    --cor-secundaria: #f2aa4c; /* Dourado/Amarelo - Sofisticado */
+    --cor-fundo: #fafafa;
+    --cor-texto: #333333;
+    --cor-footer: #1e1e1e;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* ------------------------------------------------------------------- */
+/* CABEÇALHO E NAVEGAÇÃO */
+/* ------------------------------------------------------------------- */
+header {
+    background-color: var(--cor-principal);
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2em;
+    letter-spacing: 2px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    padding: 5px 0;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+nav a:hover {
+    color: var(--cor-secundaria);
+    border-bottom: 2px solid var(--cor-secundaria);
+}
+
+h2 {
+    color: var(--cor-principal);
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: var(--cor-texto);
+    font-size: 1.5em;
+    border-bottom: 2px solid var(--cor-secundaria);
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+/* ------------------------------------------------------------------- */
+/* CONTROLO DE TAMANHO DAS IMAGENS (Perfeitas em todos os ecrãs) */
+/* ------------------------------------------------------------------- */
+
+.img-destaque {
+    width: 100%; 
+    max-height: 450px;
+    object-fit: cover; 
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+}
+
+.img-prato {
+    width: 100%; 
+    max-height: 200px; 
+    object-fit: cover; 
+    border-radius: 8px;
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: block; 
+}
+
+/* ------------------------------------------------------------------- */
+/* ESTILO DO MENU PRINCIPAL E RESPONSIVIDADE */
+/* ------------------------------------------------------------------- */
+.menu-categoria {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; 
+}
+
+.prato {
+    flex: 1 1 100%; 
+    padding: 15px;
+    border-left: 4px solid var(--cor-principal);
+    transition: transform 0.2s;
+}
+
+.prato:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.prato h4 {
+    color: var(--cor-principal);
+    margin: 5px 0;
+}
+
+.preco {
+    font-weight: bold;
+    color: var(--cor-secundaria);
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* 2 ou 3 colunas em ecrãs maiores */
+@media (min-width: 600px) {
+    .prato {
+        flex: 1 1 calc(50% - 15px); 
+        max-width: calc(50% - 15px);
+    }
+}
+
+@media (min-width: 1024px) {
+    .prato {
+        flex: 1 1 calc(33.33% - 20px); 
+        max-width: calc(33.33% - 20px);
+    }
+}
+
+/* ------------------------------------------------------------------- */
+/* ESTILO DA PÁGINA SOBRE NÓS (NOVO) */
+/* ------------------------------------------------------------------- */
+.historia p {
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+.figuras-principais {
+    margin-top: 40px;
+}
+
+.pessoa {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.pessoa h4 {
+    color: var(--cor-secundaria);
+    margin-top: 0;
+    font-size: 1.3em;
+}
+
+
+/* ------------------------------------------------------------------- */
+/* ESTILO DE FORMULÁRIOS E TABELAS (Melhoria) */
+/* ------------------------------------------------------------------- */
+.formulario-reserva {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* Estilos para os campos (inputs) */
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--cor-principal);
+}
+
+.formulario-reserva input[type="text"],
+.formulario-reserva input[type="email"],
+.formulario-reserva input[type="date"],
+.formulario-reserva input[type="time"],
+.formulario-reserva input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
+    transition: border-color 0.3s;
+}
+
+.formulario-reserva input:focus {
+    border-color: var(--cor-secundaria);
+    outline: none;
+    box-shadow: 0 0 5px rgba(242, 170, 76, 0.5);
+}
+
+.btn-reservar {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: var(--cor-principal); 
+    transition: background-color 0.3s;
+}
+
+.btn-reservar:hover {
+    background-color: #1a6296; 
+}
+
+
+/* Tabela de Alunos */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+table th {
+    background-color: var(--cor-principal); 
+    color: white;
+    font-weight: bold;
+}
+
+/* ------------------------------------------------------------------- */
+/* RODAPÉ */
+/* ------------------------------------------------------------------- */
+footer {
+    background-color: var(--cor-footer);
+    color: #ccc;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    font-size: 0.9em;
+}
